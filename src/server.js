@@ -20,7 +20,7 @@ app.use("/api/shows", showRoutes);
 app.use("/api/theatres", theatreRoutes);
 app.use("/api/screens", screenRoutes);
 app.use("/api/bookings", bookingRoutes);
-
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+const port = process.env.PORT;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
